@@ -12,18 +12,19 @@
         }
 
         :root {
-            --primary: #3b82f6;
-            --secondary: #1e40af;
+            --primary: #003d82;
+            --secondary: #001f4d;
+            --accent: #d4af37;
             --success: #10b981;
             --warning: #f59e0b;
             --danger: #ef4444;
-            --light: #f3f4f6;
+            --light: #f0f2f5;
             --dark: #1f2937;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #003d82 0%, #001f4d 100%);
             color: var(--dark);
             line-height: 1.8;
             padding: 20px;
@@ -42,6 +43,19 @@
             margin-bottom: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
             text-align: center;
+            border-top: 5px solid var(--primary);
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 50%, var(--primary) 100%);
+            border-radius: 15px 15px 0 0;
         }
 
         h1 {
@@ -134,6 +148,18 @@
             margin-bottom: 30px;
             padding-bottom: 15px;
             border-bottom: 3px solid var(--primary);
+            position: relative;
+        }
+
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            height: 3px;
+            width: 60px;
+            background: var(--accent);
+            border-radius: 3px;
         }
 
         h3 {
@@ -165,7 +191,7 @@
         }
 
         .box-info {
-            background: #dbeafe;
+            background: #e8f0ff;
             border-left-color: var(--primary);
         }
 
@@ -236,17 +262,17 @@
         }
 
         .badge-procedure {
-            background: #dbeafe;
-            color: #1e40af;
+            background: #e8f0ff;
+            color: #003d82;
         }
 
         .badge-piege {
-            background: #fef3c7;
-            color: #92400e;
+            background: #fff9e6;
+            color: #8b6914;
         }
 
         .badge-logique {
-            background: #fee2e2;
+            background: #ffe8e8;
             color: #991b1b;
         }
 
@@ -358,8 +384,9 @@
     <div class="container">
         <!-- HEADER -->
         <header>
-            <h1>📘 Douane RP - Guide Simplifié</h1>
-            <p class="tagline">Tout ce qu'il faut savoir pour être un bon douanier</p>
+            <div style="font-size: 4em; margin-bottom: 15px;">🇫🇷 👮</div>
+            <h1>📘 Douane Française RP</h1>
+            <p class="tagline">Guide Officiel - Tout ce qu'il faut savoir</p>
         </header>
 
         <!-- LAYOUT -->
